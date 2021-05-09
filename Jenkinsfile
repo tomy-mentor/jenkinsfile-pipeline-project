@@ -1,11 +1,12 @@
 
 pipeline {
-    agent { label 'master' }
+    agent any
     stages {
-        stage('build') {
+        stage('run') {
             steps {
                 echo 'Clarusway_Way to Reinvent Yourself'
-                sh 'echo Hello World'
+                sh 'python --version'
+                sh 'python pipeline.py'
             }
         }
     }
