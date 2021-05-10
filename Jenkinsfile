@@ -1,6 +1,6 @@
 
 pipeline {
-    agent [slave-1]
+    agent [linux]
     stages {
         stage('run') {
             steps {
