@@ -1,16 +1,16 @@
 pipeline {
-    agent { label 'master' }
+    agent any
     stages {
         stage('build') {
             steps {
-                echo 'Compiling the java source code'
-                sh 'javac Hello.java'
-            }
-        }
-        stage('run') {
-            steps {
-                echo 'Running the compiled java code.'
-                sh 'java Hello'
+                echo "Clarusway_Way to Reinvent Yourself"
+                sh 'echo second step'
+                sh 'echo another step'                
+                sh '''
+                echo 'Multiline'
+                echo 'Example'
+                '''
+                echo 'not using shell'
             }
         }
     }
